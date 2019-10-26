@@ -1,3 +1,3 @@
 export default function(context) {
-  console.log(context.store.state.sidebarOpen);
+  console.log(context.store.state.myTestMessage);
 }

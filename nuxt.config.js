@@ -18,12 +18,23 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
+    script: [
+      {
+        src: 'https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js'
+      }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css' },
       {
         rel: 'stylesheet',
         type: 'text/css',
         href: 'https://www.w3schools.com/w3css/4/w3.css'
+      },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://www.w3schools.com/lib/w3-colors-metro.css'
       }
     ]
   },
@@ -36,7 +47,8 @@ export default {
    */
   plugins: [
     { src: '@/plugins/bootstrap.js' },
-    { src: '@/plugins/jquery.js', ssr: false }
+    { src: '@/plugins/jquery.js', ssr: false },
+    { src: '@/plugins/vuetify.js' }
   ],
   /*
    ** Nuxt.js dev-modules

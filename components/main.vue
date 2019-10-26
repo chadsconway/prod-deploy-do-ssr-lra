@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="startPos" v-bind:class="{ slideOver: navIsOut }">
+  <div id="main" class="w3-content">
     <slot />
   </div>
 </template>
@@ -19,6 +19,7 @@ export default {
   position: absolute;
   padding-top: 60px;
   padding-bottom: 55px;
+  padding-left: 60px;
   z-index: 10;
   transition: 0.5s;
   overflow-x: hidden;
