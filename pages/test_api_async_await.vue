@@ -5,22 +5,30 @@
     </b-alert>
     <hr />
     <b-alert show variant="success">
-      {{ async_msg }}
+      {{ message }}
+      <hr />
+      {{ id }}
     </b-alert>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
       data_msg: "message in data"
     };
   },
-  asyncData() {
-    return {
-      async_msg: "message in data"
-    };
+  async asyncData(context) {
+    try {
+      const response = await axios.get("http://localhost:9000/api/test");
+      return response.data;
+    } catch (err) {
+      context.error({
+        message: "ajax problem"
+      });
+    }
   }
 };
 </script>

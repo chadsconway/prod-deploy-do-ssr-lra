@@ -1,24 +1,17 @@
 <template>
   <div class="container">
+    <b-jumbotron
+      header="NuxtServerInit Testing"
+      lead="The following message and id are axiosed at first loading"
+    >
+      <p>{{ $store.state.serverinitmessage }}</p>
+      <p>{{ $store.state.serverinitid }}</p>
+      <b-button variant="primary" href="#">More Info</b-button>
+    </b-jumbotron>
     <div>
       <h1 class="title">
         The Living Rosary Apostolate
       </h1>
-      <h2 class="subtitle">
-        Website for the Living Rosary Apostolate Global Missionaries
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
     </div>
   </div>
 </template>
