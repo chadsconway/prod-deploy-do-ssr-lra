@@ -22,15 +22,15 @@ export default {
     };
   },
   computed: mapState({
-    message: state => state.testapi.message,
-    id: state => state.testapi.id
+    message: state => state.message,
+    id: state => state.id
   }),
   async fetch(context) {
     return context.$axios
       .get("http://localhost:9000/api/test")
       .then(res => {
         if (res.data[0]) {
-          context.store.dispatch("testapi/resetBothAsync", res.data[1]);
+          context.store.dispatch("resetBothAsync", res.data[1]);
         }
       })
       .catch(err => {

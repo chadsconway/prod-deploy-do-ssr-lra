@@ -25,7 +25,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', type: 'text/css' },
       {
         rel: 'stylesheet',
         type: 'text/css',
@@ -34,7 +33,7 @@ export default {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href: 'https://www.w3schools.com/lib/w3-colors-metro.css'
+        href: ''
       }
     ]
   },
@@ -47,13 +46,12 @@ export default {
    */
   plugins: [
     { src: '@/plugins/bootstrap.js' },
-    { src: '@/plugins/jquery.js', ssr: false },
-    { src: '@/plugins/vuetify.js' }
+    { src: '@/plugins/jquery.clinet.js', mode: 'client' }
   ],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: ['@nuxtjs/vuetify'],
   /*
    ** Router with Middleware Nested
    */

@@ -1,5 +1,5 @@
 <template>
-  <div id="footer">
+  <div id="footer" class="w3-theme-d4 w3-hide-small">
     Footer
   </div>
 </template>
@@ -13,13 +13,11 @@ export default {};
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 40;
+  z-index: 20;
   height: 55px;
   width: 100%;
   font-size: 18px;
   line-height: 55px;
   text-align: start;
-  color: white;
-  background: black;
 }
 </style>

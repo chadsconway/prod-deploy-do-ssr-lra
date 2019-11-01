@@ -8,9 +8,11 @@ const _1e7ad017 = () => interopDefault(import('..\\pages\\test_api_async_await.v
 const _36e4bec1 = () => interopDefault(import('..\\pages\\test_api_axios_module.vue' /* webpackChunkName: "pages_test_api_axios_module" */))
 const _2402095f = () => interopDefault(import('..\\pages\\test_api_promise.vue' /* webpackChunkName: "pages_test_api_promise" */))
 const _87fd954e = () => interopDefault(import('..\\pages\\test_api_vuex_fetch.vue' /* webpackChunkName: "pages_test_api_vuex_fetch" */))
+const _34163b79 = () => interopDefault(import('..\\pages\\test_appbar.vue' /* webpackChunkName: "pages_test_appbar" */))
 const _0c11fcf7 = () => interopDefault(import('..\\pages\\test_card.vue' /* webpackChunkName: "pages_test_card" */))
 const _0ac318d9 = () => interopDefault(import('..\\pages\\test_flaticon.vue' /* webpackChunkName: "pages_test_flaticon" */))
 const _28cb94ab = () => interopDefault(import('..\\pages\\test_form.vue' /* webpackChunkName: "pages_test_form" */))
+const _dc7b7438 = () => interopDefault(import('..\\pages\\test_palette.vue' /* webpackChunkName: "pages_test_palette" */))
 const _1892f156 = () => interopDefault(import('..\\pages\\test_sidenav.vue' /* webpackChunkName: "pages_test_sidenav" */))
 const _62a06ece = () => interopDefault(import('..\\pages\\test_vuex.vue' /* webpackChunkName: "pages_test_vuex" */))
 const _d4fdd716 = () => interopDefault(import('..\\pages\\video-frame.vue' /* webpackChunkName: "pages_video-frame" */))
@@ -46,6 +48,10 @@ export const routerOptions = {
     component: _87fd954e,
     name: "test_api_vuex_fetch"
   }, {
+    path: "/test_appbar",
+    component: _34163b79,
+    name: "test_appbar"
+  }, {
     path: "/test_card",
     component: _0c11fcf7,
     name: "test_card"
@@ -57,6 +63,10 @@ export const routerOptions = {
     path: "/test_form",
     component: _28cb94ab,
     name: "test_form"
+  }, {
+    path: "/test_palette",
+    component: _dc7b7438,
+    name: "test_palette"
   }, {
     path: "/test_sidenav",
     component: _1892f156,

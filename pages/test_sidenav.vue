@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w3-hide-small">
     <h1>test-sidenav</h1>
     <sidenav />
   </div>

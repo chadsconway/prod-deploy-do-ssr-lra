@@ -1,8 +1,8 @@
 <template>
   <div class="card">
-    <div class="card-header">
-      Quote
-    </div>
+    <header class="w3-container w3-theme-d2">
+      <h3>Quote</h3>
+    </header>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
         <p>

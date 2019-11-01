@@ -1,11 +1,11 @@
 <template>
   <div
     id="sfs"
-    class="w3-metro-teal w3-sidebar w3-bar-block w3-card w3-animate-left"
+    class="w3-hide-small w3-sidebar w3-theme-d1 w3-bar-block w3-card w3-animate-left"
     v-on:mouseover="updateWidth('wide')"
     v-on:mouseout="updateWidth('narrow')"
     v-bind:style="{ width: navwidth }"
-    v-bind:class="[isWide ? blurClass : '', bkClass]"
+    v-bind:class="{ bkClass, myColor }"
   >
     <iconspritelite />
 
@@ -58,9 +58,9 @@
       </svg>
       Support
     </a>
-    <a href="#join" class=" w3-bar-item w3-button">
-      <svg viewBox="0 0 512.017 512.017" width="30" height="30" class="icon">
-        <use xlink:href="#network" />
+    <a href="#join" class="pl-1 w3-bar-item w3-button">
+      <svg viewBox="0 0 100 125" width="40" height="40" class="icon">
+        <use xlink:href="#heartshake" />
       </svg>
       Join
     </a>
@@ -82,6 +82,7 @@ export default {
   name: "sidenav",
   data: function() {
     return {
+      myColor: "w3-theme-d1",
       bkClass: "bk",
       blurClass: "blur",
       navwidth: "60px",
@@ -150,6 +151,10 @@ a {
   overflow-x: hidden;
 }
 
+a:hover {
+  background-color: #007977;
+}
+
 #sfs a {
   padding: 10px 0px 5px 10px;
   text-decoration: none;
@@ -158,7 +163,7 @@ a {
 }
 
 #sfs a:hover {
-  background-color: #00566b;
+  background-color: #007977;
   color: #d1d1d1;
 }
 

@@ -1,23 +1,26 @@
 <template>
-  <div id="main" class="w3-content">
+  <div
+    id="mainelement"
+    v-bind:class="{ slideOver: sidebarOpen }"
+    class="w3-display-container"
+  >
     <slot />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      navIsOut: false
-    };
+  computed: {
+    // sidenav status getter
+    sidebarOpen: function() {
+      return this.$store.state.sidebarOpen;
+    }
   }
 };
 </script>
 
 <style scoped>
-#main {
-  position: absolute;
-  padding-top: 60px;
+#mainelement {
   padding-bottom: 55px;
   padding-left: 60px;
   z-index: 10;

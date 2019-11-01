@@ -1,5 +1,8 @@
 const middleware = {}
 
+middleware['babel.config'] = require('..\\middleware\\babel.config.js')
+middleware['babel.config'] = middleware['babel.config'].default || middleware['babel.config']
+
 middleware['mw_vuex'] = require('..\\middleware\\mw_vuex.js')
 middleware['mw_vuex'] = middleware['mw_vuex'].default || middleware['mw_vuex']
 
