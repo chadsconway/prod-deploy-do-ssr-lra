@@ -12,6 +12,7 @@ const _34163b79 = () => interopDefault(import('..\\pages\\test_appbar.vue' /* we
 const _0c11fcf7 = () => interopDefault(import('..\\pages\\test_card.vue' /* webpackChunkName: "pages_test_card" */))
 const _0ac318d9 = () => interopDefault(import('..\\pages\\test_flaticon.vue' /* webpackChunkName: "pages_test_flaticon" */))
 const _28cb94ab = () => interopDefault(import('..\\pages\\test_form.vue' /* webpackChunkName: "pages_test_form" */))
+const _630aab28 = () => interopDefault(import('..\\pages\\test_gradients.vue' /* webpackChunkName: "pages_test_gradients" */))
 const _dc7b7438 = () => interopDefault(import('..\\pages\\test_palette.vue' /* webpackChunkName: "pages_test_palette" */))
 const _1892f156 = () => interopDefault(import('..\\pages\\test_sidenav.vue' /* webpackChunkName: "pages_test_sidenav" */))
 const _62a06ece = () => interopDefault(import('..\\pages\\test_vuex.vue' /* webpackChunkName: "pages_test_vuex" */))
@@ -63,6 +64,10 @@ export const routerOptions = {
     path: "/test_form",
     component: _28cb94ab,
     name: "test_form"
+  }, {
+    path: "/test_gradients",
+    component: _630aab28,
+    name: "test_gradients"
   }, {
     path: "/test_palette",
     component: _dc7b7438,
