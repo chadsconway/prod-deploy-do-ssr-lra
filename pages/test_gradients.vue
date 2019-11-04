@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="site-palette">
-      <div class="w3-half">
+      <div class="w3-quarter">
         <h2>Created Theme</h2>
         <table class="palette">
           <tbody>
@@ -96,19 +96,48 @@
           </tbody>
         </table>
       </div>
+      <div class="w3-threequarter">
+        <div class="w3-container">
+          <div class="row">
+            <card-vuetify
+              v-for="detail in $store.state.detailsArray"
+              v-bind:key="detail.id"
+              v-bind:title="detail.title"
+              v-bind:excerpt="detail.excerpt"
+              v-bind:icon="detail.icon"
+              v-bind:viewbox="detail.viewbox"
+            >
+            </card-vuetify>
+          </div>
+        </div>
+      </div>
     </div>
-    <color-theme />
   </div>
 </template>
 
 <script>
 import colorTheme from "@/components/color-theme";
+import cardVuetify from "@/components/card-vuetify";
 export default {
   components: {
-    colorTheme
+    colorTheme,
+    cardVuetify
   }
 };
 </script>
 
-<style>
+<style lang="sass">
+$colorThemel5: #ebffff
+$colorThemel4: #bcfffe 
+$colorThemel3: #78fffd 
+$colorThemel2: #35fffc 
+$colorThemel1: #00f1ed 
+$colorTheme: #00aba9 
+$colorThemed1: #009c99 
+$colorThemed2: #008b88 
+$colorThemed3: #007977 
+$colorThemed4: #006866 
+$colorThemed5: #005755 
+
+
 </style>

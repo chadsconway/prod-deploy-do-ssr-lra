@@ -16,6 +16,7 @@ const _630aab28 = () => interopDefault(import('..\\pages\\test_gradients.vue' /*
 const _dc7b7438 = () => interopDefault(import('..\\pages\\test_palette.vue' /* webpackChunkName: "pages_test_palette" */))
 const _1892f156 = () => interopDefault(import('..\\pages\\test_sidenav.vue' /* webpackChunkName: "pages_test_sidenav" */))
 const _62a06ece = () => interopDefault(import('..\\pages\\test_vuex.vue' /* webpackChunkName: "pages_test_vuex" */))
+const _ba42a752 = () => interopDefault(import('..\\pages\\test-box-shadow.vue' /* webpackChunkName: "pages_test-box-shadow" */))
 const _d4fdd716 = () => interopDefault(import('..\\pages\\video-frame.vue' /* webpackChunkName: "pages_video-frame" */))
 const _ea1d0ca8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
@@ -80,6 +81,10 @@ export const routerOptions = {
     path: "/test_vuex",
     component: _62a06ece,
     name: "test_vuex"
+  }, {
+    path: "/test-box-shadow",
+    component: _ba42a752,
+    name: "test-box-shadow"
   }, {
     path: "/video-frame",
     component: _d4fdd716,

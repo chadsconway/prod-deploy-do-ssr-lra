@@ -2,7 +2,7 @@
   <v-card class="w3-padding w3-margin w3-col sm11 m10 l5" outlined>
     <v-list-item three-line>
       <v-list-item-content>
-        <div class="w3-theme-d3">
+        <div class="card-icon-box">
           <svg v-bind:viewbox="viewbox" width="80" height="80" class="icon">
             <use v-bind:xlink:href="icon" />
           </svg>
@@ -32,4 +32,8 @@ export default {
 </script>
 
 <style scoped>
+.cardIconBox {
+  background-color: #007977;
+  background-image: linear-gradient("#007977", "#00aba9");
+}
 </style>

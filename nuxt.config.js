@@ -34,6 +34,11 @@ export default {
         rel: 'stylesheet',
         type: 'text/css',
         href: ''
+      },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: ''
       }
     ]
   },
@@ -81,6 +86,6 @@ export default {
     /*
      ** Global CSS
      */
-    css: ['@/assets/mycustom.css']
+    css: ['/mycustom.css', '/css/box-shadows.css']
   }
 };
