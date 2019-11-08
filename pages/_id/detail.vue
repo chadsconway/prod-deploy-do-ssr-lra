@@ -6,6 +6,10 @@
         <h3>Detail Page</h3>
         <b>ID:</b>
         <b>{{ $route.params.id }}</b>
+        <hr />
+        <nuxt-link v-bind:to="{ name: 'id', params: { id: $route.params.id } }">
+          Index Page
+        </nuxt-link>
       </b-alert>
     </b-card>
   </div>

@@ -5,6 +5,12 @@
       <b-alert show variant="primary">
         <b>ID:</b>
         <b>{{ $route.params.id }}</b>
+        <hr />
+        <nuxt-link
+          v-bind:to="{ name: 'id-detail', params: { id: $route.params.id } }"
+        >
+          Detail Page
+        </nuxt-link>
       </b-alert>
     </b-card>
   </div>
