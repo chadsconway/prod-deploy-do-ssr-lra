@@ -2,12 +2,10 @@
   <div id="app">
     <v-app>
       <div>
-        <v-card class="overflow-hidden">
+        <v-card class="overflow-hidden w3-theme-d3">
           <v-app-bar
             absolute
-            dark
             scroll-target="#playground-example"
-            :color="color"
             :elevate-on-scroll="elevateOnScroll"
             :hide-on-scroll="hideOnScroll"
             :fade-on-scroll="fadeOnScroll"

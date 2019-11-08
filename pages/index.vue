@@ -1,8 +1,13 @@
 <template>
   <div>
-    <div class="w3-display-container">
-      <v-img src="img/still_from_video.png" max-height="450"></v-img>
+    <div class="w3-display-container" max-height="450px">
+      <v-img
+        src="img/still_from_video.png"
+        height="100%"
+        :aspect-ratio="3 / 1"
+      ></v-img>
     </div>
+    <video-frame-2 />
     <div class="w3-container">
       <div class="row">
         <card-vuetify
@@ -20,10 +25,14 @@
 </template>
 
 <script>
+import videoFrame2 from "@/components/video-frame-2";
+import contentVideoFrame from "@/components/content-video-frame";
 import cardVuetify from "@/components/card-vuetify";
 export default {
   components: {
-    cardVuetify
+    cardVuetify,
+    contentVideoFrame,
+    videoFrame2
   }
 };
 </script>

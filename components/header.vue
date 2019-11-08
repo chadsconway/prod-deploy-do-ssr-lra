@@ -18,7 +18,7 @@ export default {};
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 25;
   height: 60px;
   width: 100%;
   text-align: start;

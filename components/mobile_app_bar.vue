@@ -44,7 +44,7 @@ export default {
       collapseOnScroll: false,
       shrinkOnScroll: false,
       extended: false,
-      color: "accent",
+      color: "#00aba9",
       colors: ["primary", "accent", "warning lighten-2", "teal", "orange"]
     };
   }

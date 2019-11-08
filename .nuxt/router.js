@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _75dd20ba = () => interopDefault(import('..\\pages\\route.vue' /* webpackChunkName: "pages_route" */))
+const _5ef5977f = () => interopDefault(import('..\\pages\\route\\index.vue' /* webpackChunkName: "pages_route_index" */))
 const _34d70b74 = () => interopDefault(import('..\\pages\\test_2_vuex.vue' /* webpackChunkName: "pages_test_2_vuex" */))
 const _1e7ad017 = () => interopDefault(import('..\\pages\\test_api_async_await.vue' /* webpackChunkName: "pages_test_api_async_await" */))
 const _36e4bec1 = () => interopDefault(import('..\\pages\\test_api_axios_module.vue' /* webpackChunkName: "pages_test_api_axios_module" */))
@@ -12,13 +14,18 @@ const _34163b79 = () => interopDefault(import('..\\pages\\test_appbar.vue' /* we
 const _0c11fcf7 = () => interopDefault(import('..\\pages\\test_card.vue' /* webpackChunkName: "pages_test_card" */))
 const _0ac318d9 = () => interopDefault(import('..\\pages\\test_flaticon.vue' /* webpackChunkName: "pages_test_flaticon" */))
 const _28cb94ab = () => interopDefault(import('..\\pages\\test_form.vue' /* webpackChunkName: "pages_test_form" */))
-const _630aab28 = () => interopDefault(import('..\\pages\\test_gradients.vue' /* webpackChunkName: "pages_test_gradients" */))
 const _dc7b7438 = () => interopDefault(import('..\\pages\\test_palette.vue' /* webpackChunkName: "pages_test_palette" */))
 const _1892f156 = () => interopDefault(import('..\\pages\\test_sidenav.vue' /* webpackChunkName: "pages_test_sidenav" */))
 const _62a06ece = () => interopDefault(import('..\\pages\\test_vuex.vue' /* webpackChunkName: "pages_test_vuex" */))
 const _ba42a752 = () => interopDefault(import('..\\pages\\test-box-shadow.vue' /* webpackChunkName: "pages_test-box-shadow" */))
+const _9dad6d44 = () => interopDefault(import('..\\pages\\test-gradients.vue' /* webpackChunkName: "pages_test-gradients" */))
+const _7fb8e467 = () => interopDefault(import('..\\pages\\test-shapes.vue' /* webpackChunkName: "pages_test-shapes" */))
 const _d4fdd716 = () => interopDefault(import('..\\pages\\video-frame.vue' /* webpackChunkName: "pages_video-frame" */))
+const _0cbc684e = () => interopDefault(import('..\\pages\\id\\_id.vue' /* webpackChunkName: "pages_id__id" */))
 const _ea1d0ca8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _446bfeee = () => interopDefault(import('..\\pages\\_id\\index.vue' /* webpackChunkName: "pages__id_index" */))
+const _48473131 = () => interopDefault(import('..\\pages\\id\\index.vue' /* webpackChunkName: "pages_id_index" */))
+const _3d322336 = () => interopDefault(import('..\\pages\\_id\\detail.vue' /* webpackChunkName: "pages__id_detail" */))
 
 Vue.use(Router)
 
@@ -30,6 +37,14 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/route",
+    component: _75dd20ba,
+    children: [{
+      path: "",
+      component: _5ef5977f,
+      name: "route"
+    }]
+  }, {
     path: "/test_2_vuex",
     component: _34d70b74,
     name: "test_2_vuex"
@@ -66,10 +81,6 @@ export const routerOptions = {
     component: _28cb94ab,
     name: "test_form"
   }, {
-    path: "/test_gradients",
-    component: _630aab28,
-    name: "test_gradients"
-  }, {
     path: "/test_palette",
     component: _dc7b7438,
     name: "test_palette"
@@ -86,13 +97,37 @@ export const routerOptions = {
     component: _ba42a752,
     name: "test-box-shadow"
   }, {
+    path: "/test-gradients",
+    component: _9dad6d44,
+    name: "test-gradients"
+  }, {
+    path: "/test-shapes",
+    component: _7fb8e467,
+    name: "test-shapes"
+  }, {
     path: "/video-frame",
     component: _d4fdd716,
     name: "video-frame"
   }, {
+    path: "/id/:id",
+    component: _0cbc684e,
+    name: "id-id"
+  }, {
     path: "/",
     component: _ea1d0ca8,
     name: "index"
+  }, {
+    path: "/:id",
+    component: _446bfeee,
+    children: [{
+      path: "",
+      component: _48473131,
+      name: "id"
+    }]
+  }, {
+    path: "/:id/detail",
+    component: _3d322336,
+    name: "id-detail"
   }],
 
   fallback: false

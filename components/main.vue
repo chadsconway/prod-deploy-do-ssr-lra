@@ -9,12 +9,23 @@
 </template>
 
 <script>
+import Vue from "vue";
+import Vuetify from "vuetify";
 export default {
   computed: {
     // sidenav status getter
     sidebarOpen: function() {
       return this.$store.state.sidebarOpen;
     }
+    /* 
+   mainPaddingLeft: function() {
+      console.log(
+        "main.vue computed padding-left with $vuetify breakpoint: ",
+        $Vuetify.breakpoint.hiddenSmAndDown
+      );
+      return $Vuetify.breakpoint.hiddenSmAndDown;
+    }
+    */
   }
 };
 </script>

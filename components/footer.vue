@@ -10,10 +10,10 @@ export default {};
 
 <style scoped>
 #footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 20;
+  z-index: 15;
   height: 55px;
   width: 100%;
   font-size: 18px;
