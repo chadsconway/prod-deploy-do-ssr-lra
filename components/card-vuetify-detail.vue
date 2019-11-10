@@ -1,5 +1,5 @@
 <template>
-  <v-card class="w3-margin w3-col sm11 m10 l5" outlined>
+  <v-card class="w3-margin w3-col sm11 m10 l10 mx-auto" outlined>
     <v-list-item three-line>
       <v-list-item-content>
         <div class="card-icon-box w3-padding">
