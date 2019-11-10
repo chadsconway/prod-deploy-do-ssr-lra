@@ -1,30 +1,30 @@
 <template>
-  <div>
-    <b-card>
-      <p>pages/_id/index.vue</p>
-      <b-alert show variant="primary">
-        <b>ID:</b>
-        <b>{{ $route.params.id }}</b>
-        <hr />
-        <nuxt-link
-          v-bind:to="{ name: 'id-detail', params: { id: $route.params.id } }"
-        >
-          Detail Page
-        </nuxt-link>
-      </b-alert>
-    </b-card>
+  <div class="w3-container">
+    <card-vuetify-detail
+      v-bind:title="$store.state.detailsArray[$route.params.id].title"
+      v-bind:content="$store.state.detailsArray[$route.params.id].content"
+      v-bind:icon="$store.state.detailsArray[$route.params.id].icon"
+      v-bind:viewbox="$store.state.detailsArray[$route.params.id].viewbox"
+    >
+    </card-vuetify-detail>
   </div>
 </template>
 
 <script>
+import cardVuetifyDetail from "@/components/card-vuetify-detail";
 export default {
-  head() {
-    return {
-      title: "Dynamic Route"
-    };
+  components: {
+    cardVuetifyDetail
   }
 };
 </script>
 
-<style>
+<style scoped>
+.w3Container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
 </style>

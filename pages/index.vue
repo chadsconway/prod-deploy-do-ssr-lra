@@ -13,6 +13,7 @@
         <card-vuetify
           v-for="detail in $store.state.detailsArray"
           v-bind:key="detail.id"
+          v-bind:id="detail.id"
           v-bind:title="detail.title"
           v-bind:excerpt="detail.excerpt"
           v-bind:icon="detail.icon"

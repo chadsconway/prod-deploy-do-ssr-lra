@@ -9,12 +9,12 @@
         </div>
         <v-list-item-title class="headline mb-1">{{ title }}</v-list-item-title>
         <v-list-item-subtitle> </v-list-item-subtitle>
-        <p>{{ excerpt }}</p>
+        <p>{{ content }}</p>
       </v-list-item-content>
     </v-list-item>
 
     <v-card-actions>
-      <v-btn :to="{ name: 'id', params: { id: id } }" text>Learn More</v-btn>
+      <nuxt-link class="btn" to="/">Back</nuxt-link>
     </v-card-actions>
   </v-card>
 </template>
@@ -24,6 +24,7 @@ export default {
   props: {
     title: String,
     excerpt: String,
+    content: String,
     id: Number,
     icon: String,
     viewbox: String

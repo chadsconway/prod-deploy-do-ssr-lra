@@ -9,62 +9,95 @@
   >
     <iconspritelite />
 
-    <nuxt-link to="/" class=" w3-bar-item w3-button active">
+    <nuxt-link to="/" class=" w3-bar-item w3-button cc-text">
       <svg viewBox="0 0 310 310" width="30" height="30" class="icon">
         <use xlink:href="#church" />
       </svg>
       Home
     </nuxt-link>
-
-    <nuxt-link v-bind:to="{ id: 'what' }" class=" w3-bar-item w3-button">
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 0 } }"
+      class=" w3-bar-item w3-button"
+    >
+      <svg viewBox="0 0 512 512.00027" width="30" height="30" class="icon">
+        <use xlink:href="#bracelet" />
+      </svg>
+      Overview
+    </nuxt-link>
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 1 } }"
+      class=" w3-bar-item w3-button"
+    >
       <svg viewBox="0 0 496 496" width="30" height="30" class="icon">
         <use xlink:href="#christian-1" />
       </svg>
       What?
     </nuxt-link>
-    <nuxt-link v-bind:to="{ id: 'how' }" class=" w3-bar-item w3-button">
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 2 } }"
+      class=" w3-bar-item w3-button"
+    >
       <svg viewBox="0 0 492.388 492.388" width="30" height="30" class="icon">
         <use xlink:href="#praying-hands" />
       </svg>
       How?</nuxt-link
     >
-    <nuxt-link v-bind:to="{ id: 'history' }" class=" w3-bar-item w3-button">
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 3 } }"
+      class=" w3-bar-item w3-button"
+    >
       <svg viewBox="0 -15 512 511" width="30" height="30" class="icon">
         <use xlink:href="#book" />
       </svg>
       History
     </nuxt-link>
-    <nuxt-link v-bind:to="{ id: 'approvals' }" class=" w3-bar-item w3-button">
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 'approvals' } }"
+      class=" w3-bar-item w3-button"
+    >
       <svg viewBox="0 0 300.002 300.002" width="30" height="30" class="icon">
         <use xlink:href="#priest" />
       </svg>
       Approvals
     </nuxt-link>
-    <nuxt-link v-bind:to="{ id: 'testimony' }" class=" w3-bar-item w3-button">
+    <!-- Testimony Tab -->
+    <!-- <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 'testimony' } }"
+      class=" w3-bar-item w3-button"
+    >
       <svg viewBox="0 0 512 512" width="30" height="30" class="icon">
         <use xlink:href="#testimonial" />
       </svg>
       Testimony
-    </nuxt-link>
+    </nuxt-link> -->
     <!-- Calendar Tab for Events  -->
-    <!-- <nuxt-link v-bind:to="{id: 'calendar'}" class=" w3-bar-item w3-button">
+    <!-- <nuxt-link v-bind:to="{id: 'calendar'}}" class=" w3-bar-item w3-button">
       <svg viewBox="0 0 512.00244 512" width="30" height="30" class="icon">
         <use xlink:href="#calendar" /></svg
       >Events
     </nuxt-link> -->
-    <nuxt-link v-bind:to="{ id: 'donate' }" class=" w3-bar-item w3-button">
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 'donate' } }"
+      class=" w3-bar-item w3-button"
+    >
       <svg viewBox="-1 0 512.00244 512" width="30" height="30" class="icon">
         <use xlink:href="#prayer" />
       </svg>
       Support
     </nuxt-link>
-    <nuxt-link v-bind:to="{ id: 'join' }" class=" pl-1 w3-bar-item w3-button">
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 'join' } }"
+      class=" pl-1 w3-bar-item w3-button"
+    >
       <svg viewBox="0 0 100 125" width="40" height="40" class="icon">
         <use xlink:href="#heartshake" />
       </svg>
       Join
     </nuxt-link>
-    <nuxt-link v-bind:to="{ id: 'founders' }" class=" w3-bar-item w3-button">
+    <nuxt-link
+      v-bind:to="{ name: 'id', params: { id: 'founders' } }"
+      class=" w3-bar-item w3-button"
+    >
       <svg viewBox="0 0 467.963 467.963" width="30" height="30" class="icon">
         <use xlink:href="#three-candles" />
       </svg>
@@ -124,7 +157,17 @@ export default {
 </script>
 
 <style scoped>
-a svg use {
+.cc-text {
+  color: #fff;
+  opacity: 1;
+}
+
+.active {
+  background-color: #005755;
+  color: #fff;
+}
+
+svg use {
   margin-right: 2%;
   color: #d1d1d1;
 }
@@ -144,6 +187,10 @@ a svg use {
   overflow-x: hidden;
   z-index: 20;
   overflow-y: hidden;
+}
+
+a {
+  color: #d1d1d1;
 }
 
 a {

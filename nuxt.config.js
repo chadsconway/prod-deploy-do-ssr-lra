@@ -86,6 +86,12 @@ export default {
     /*
      ** Global CSS
      */
-    css: ['/mycustom.css', '/css/box-shadows.css']
+    css: ['/mycustom.css', '/css/box-shadows.css'],
+    /*
+     ** For active highlighting of link tags
+     */
+    router: {
+      linkExactActiveClass: 'active'
+    }
   }
 };
