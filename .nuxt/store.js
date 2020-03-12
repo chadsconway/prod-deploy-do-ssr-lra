@@ -19,23 +19,15 @@ void (function updateModules () {
   // Enforce store modules
   store.modules = store.modules || {}
 
-  resolveStoreModules(require('..\\store\\contacts.js'), 'contacts.js')
-  resolveStoreModules(require('..\\store\\details.js'), 'details.js')
   resolveStoreModules(require('..\\store\\module_1.js'), 'module_1.js')
-  resolveStoreModules(require('..\\store\\mysteries.js'), 'mysteries.js')
-  resolveStoreModules(require('..\\store\\testapi.js'), 'testapi.js')
 
   // If the environment supports hot reloading...
 
   if (process.client && module.hot) {
     // Whenever any Vuex module is updated...
     module.hot.accept([
-      '..\\store\\contacts.js',
-      '..\\store\\details.js',
       '..\\store\\index.js',
       '..\\store\\module_1.js',
-      '..\\store\\mysteries.js',
-      '..\\store\\testapi.js',
     ], () => {
       // Update `root.modules` with the latest definitions.
       updateModules()

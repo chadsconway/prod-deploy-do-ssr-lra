@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <v-app>
-      <fab></fab>
       <div class="main-container">
         <Header />
         <Sidenav v-bind:class="{ hideSideNav: sidenavIsHid }" />
@@ -24,7 +23,6 @@ import Footer from "@/components/footer";
 import Sidenav from "@/components/sidenav";
 import MobileBottomNav from "@/components/mobile_bottom_nav";
 import MobileAppBar from "@/components/mobile_app_bar";
-import fab from "@/components/fab";
 export default {
   data() {
     return {
@@ -32,7 +30,6 @@ export default {
     };
   },
   components: {
-    fab,
     Header,
     Main,
     Footer,

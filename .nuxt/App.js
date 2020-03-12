@@ -11,9 +11,10 @@ import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
 import '..\\node_modules\\vuetify\\dist\\vuetify.css'
 
+import _c256562c from '..\\layouts\\default copy.vue'
 import _6f6c098b from '..\\layouts\\default.vue'
 
-const layouts = { "_default": _6f6c098b }
+const layouts = { "_default copy": _c256562c,"_default": _6f6c098b }
 
 export default {
   head: {"title":"lra-v.0.4.0","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Website for the Living Rosary Apostolate Global Missionaries"}],"script":[{"src":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbabel-polyfill\u002Fdist\u002Fpolyfill.min.js"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fwww.w3schools.com\u002Fw3css\u002F4\u002Fw3.css"},{"rel":"stylesheet","type":"text\u002Fcss","href":""},{"rel":"stylesheet","type":"text\u002Fcss","href":""},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"}],"style":[]},

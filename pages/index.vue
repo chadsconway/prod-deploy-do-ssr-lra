@@ -27,12 +27,10 @@
 
 <script>
 import videoFrame2 from "@/components/video-frame-2";
-import contentVideoFrame from "@/components/content-video-frame";
 import cardVuetify from "@/components/card-vuetify";
 export default {
   components: {
     cardVuetify,
-    contentVideoFrame,
     videoFrame2
   }
 };

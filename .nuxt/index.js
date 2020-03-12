@@ -15,7 +15,8 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_8bd11a9e from 'nuxt_plugin_plugin_8bd11a9e' // Source: .\\vuetify\\plugin.js (mode: 'all')
 import nuxt_plugin_axios_15367674 from 'nuxt_plugin_axios_15367674' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_bootstrap_56cad686 from 'nuxt_plugin_bootstrap_56cad686' // Source: ..\\plugins\\bootstrap.js (mode: 'all')
-import nuxt_plugin_jqueryclinet_12039204 from 'nuxt_plugin_jqueryclinet_12039204' // Source: ..\\plugins\\jquery.clinet.js (mode: 'client')
+import nuxt_plugin_jqueryclient_2fbd2620 from 'nuxt_plugin_jqueryclient_2fbd2620' // Source: ..\\plugins\\jquery.client.js (mode: 'client')
+import nuxt_plugin_responsive_5f05de4f from 'nuxt_plugin_responsive_5f05de4f' // Source: ..\\plugins\\responsive.js (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -184,8 +185,12 @@ async function createApp (ssrContext) {
     await nuxt_plugin_bootstrap_56cad686(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_jqueryclinet_12039204 === 'function') {
-    await nuxt_plugin_jqueryclinet_12039204(app.context, inject)
+  if (process.client && typeof nuxt_plugin_jqueryclient_2fbd2620 === 'function') {
+    await nuxt_plugin_jqueryclient_2fbd2620(app.context, inject)
+  }
+
+  if (process.client && typeof nuxt_plugin_responsive_5f05de4f === 'function') {
+    await nuxt_plugin_responsive_5f05de4f(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

@@ -1,9 +1,5 @@
 <template>
-  <div
-    id="mainelement"
-    v-bind:class="{ slideOver: sidebarOpen }"
-    class="w3-display-container"
-  >
+  <div id="mainelement" class="w3-container">
     <slot />
   </div>
 </template>
@@ -12,31 +8,26 @@
 import Vue from "vue";
 import Vuetify from "vuetify";
 export default {
-  computed: {
-    // sidenav status getter
-    sidebarOpen: function() {
-      return this.$store.state.sidebarOpen;
-    }
-    /* 
-   mainPaddingLeft: function() {
-      console.log(
-        "main.vue computed padding-left with $vuetify breakpoint: ",
-        $Vuetify.breakpoint.hiddenSmAndDown
-      );
-      return $Vuetify.breakpoint.hiddenSmAndDown;
-    }
-    */
+  data() {
+    return {
+      sidenavIsHid: false
+    };
   }
 };
 </script>
 
 <style scoped>
 #mainelement {
+  position: relative;
+  display: inline-flex;
+  padding-top: 60px;
   padding-bottom: 55px;
-  padding-left: 60px;
-  z-index: 10;
   transition: 0.5s;
   overflow-x: hidden;
+}
+
+.addPaddingLeft {
+  padding-left: 60px;
 }
 
 .slideOver {

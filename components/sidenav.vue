@@ -1,11 +1,10 @@
 <template>
   <div
     id="sfs"
-    class="w3-hide-small w3-sidebar w3-theme-d1 w3-bar-block w3-card w3-animate-left"
+    class="w3-sidebar w3-theme-d1 w3-bar-block w3-card w3-animate-left"
     v-on:mouseover="updateWidth('wide')"
     v-on:mouseout="updateWidth('narrow')"
     v-bind:style="{ width: navwidth }"
-    v-bind:class="{ bkClass, myColor }"
   >
     <iconspritelite />
 
@@ -15,9 +14,15 @@
       </svg>
       Home
     </nuxt-link>
+    <nuxt-link to="/donate" class=" w3-bar-item w3-button cc-text">
+      <svg viewBox="0 0 496 496" width="30" height="30" class="icon">
+        <use xlink:href="#christian-1" />
+      </svg>
+      Donate
+    </nuxt-link>
     <nuxt-link
       v-bind:to="{ name: 'id', params: { id: 0 } }"
-      class=" w3-bar-item w3-button"
+      class=" w3-bar-item w3-button cc-text"
     >
       <svg viewBox="0 0 512 512.00027" width="30" height="30" class="icon">
         <use xlink:href="#bracelet" />
@@ -26,16 +31,16 @@
     </nuxt-link>
     <nuxt-link
       v-bind:to="{ name: 'id', params: { id: 1 } }"
-      class=" w3-bar-item w3-button"
+      class=" w3-bar-item w3-button cc-text"
     >
-      <svg viewBox="0 0 496 496" width="30" height="30" class="icon">
-        <use xlink:href="#christian-1" />
+      <svg viewBox="-1 0 512.00244 512" width="30" height="30" class="icon">
+        <use xlink:href="#prayer" />
       </svg>
       What?
     </nuxt-link>
     <nuxt-link
       v-bind:to="{ name: 'id', params: { id: 2 } }"
-      class=" w3-bar-item w3-button"
+      class=" w3-bar-item w3-button cc-text"
     >
       <svg viewBox="0 0 492.388 492.388" width="30" height="30" class="icon">
         <use xlink:href="#praying-hands" />
@@ -44,7 +49,7 @@
     >
     <nuxt-link
       v-bind:to="{ name: 'id', params: { id: 3 } }"
-      class=" w3-bar-item w3-button"
+      class=" w3-bar-item w3-button cc-text"
     >
       <svg viewBox="0 -15 512 511" width="30" height="30" class="icon">
         <use xlink:href="#book" />
@@ -53,7 +58,7 @@
     </nuxt-link>
     <nuxt-link
       v-bind:to="{ name: 'id', params: { id: 'approvals' } }"
-      class=" w3-bar-item w3-button"
+      class=" w3-bar-item w3-button cc-text"
     >
       <svg viewBox="0 0 300.002 300.002" width="30" height="30" class="icon">
         <use xlink:href="#priest" />
@@ -76,18 +81,10 @@
         <use xlink:href="#calendar" /></svg
       >Events
     </nuxt-link> -->
-    <nuxt-link
-      v-bind:to="{ name: 'id', params: { id: 'donate' } }"
-      class=" w3-bar-item w3-button"
-    >
-      <svg viewBox="-1 0 512.00244 512" width="30" height="30" class="icon">
-        <use xlink:href="#prayer" />
-      </svg>
-      Support
-    </nuxt-link>
+
     <nuxt-link
       v-bind:to="{ name: 'id', params: { id: 'join' } }"
-      class=" pl-1 w3-bar-item w3-button"
+      class=" pl-1 w3-bar-item w3-button cc-text"
     >
       <svg viewBox="0 0 100 125" width="40" height="40" class="icon">
         <use xlink:href="#heartshake" />
@@ -96,7 +93,7 @@
     </nuxt-link>
     <nuxt-link
       v-bind:to="{ name: 'id', params: { id: 'founders' } }"
-      class=" w3-bar-item w3-button"
+      class=" w3-bar-item w3-button cc-text"
     >
       <svg viewBox="0 0 467.963 467.963" width="30" height="30" class="icon">
         <use xlink:href="#three-candles" />
@@ -120,6 +117,7 @@ export default {
       blurClass: "blur",
       navwidth: "60px",
       isWide: false,
+      sidenavIsHid: false,
       variants: [
         {
           variantId: "wide",
@@ -143,15 +141,6 @@ export default {
         this.isWide = false;
       }
     }
-  },
-
-  mounted() {
-    // register mousenter, mouseleave
-  },
-  updated() {
-    //
-    // adjust accordingly
-    // re-register mousenter, mouseleave?
   }
 };
 </script>
@@ -165,6 +154,9 @@ export default {
 .active {
   background-color: #005755;
   color: #fff;
+}
+.hideSideNav {
+  display: none;
 }
 
 svg use {
@@ -180,12 +172,10 @@ svg use {
   transition: 0.5s;
   height: 100%;
   width: 60px;
-  position: fixed;
   padding-top: 60px;
   left: 0;
   white-space: nowrap;
   overflow-x: hidden;
-  z-index: 20;
   overflow-y: hidden;
 }
 

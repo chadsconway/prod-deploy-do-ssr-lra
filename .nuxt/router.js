@@ -17,6 +17,7 @@ const _0ac318d9 = () => interopDefault(import('..\\pages\\test_flaticon.vue' /* 
 const _28cb94ab = () => interopDefault(import('..\\pages\\test_form.vue' /* webpackChunkName: "pages_test_form" */))
 const _ba42a752 = () => interopDefault(import('..\\pages\\test-box-shadow.vue' /* webpackChunkName: "pages_test-box-shadow" */))
 const _9dad6d44 = () => interopDefault(import('..\\pages\\test-gradients.vue' /* webpackChunkName: "pages_test-gradients" */))
+const _4abcfda9 = () => interopDefault(import('..\\pages\\test-responsive.vue' /* webpackChunkName: "pages_test-responsive" */))
 const _7fb8e467 = () => interopDefault(import('..\\pages\\test-shapes.vue' /* webpackChunkName: "pages_test-shapes" */))
 const _d4fdd716 = () => interopDefault(import('..\\pages\\video-frame.vue' /* webpackChunkName: "pages_video-frame" */))
 const _1e6613da = () => interopDefault(import('..\\pages\\what.vue' /* webpackChunkName: "pages_what" */))
@@ -26,7 +27,6 @@ const _46c86677 = () => interopDefault(import('..\\pages\\info\\_id\\detail.vue'
 const _f4f4dcc4 = () => interopDefault(import('..\\pages\\info\\_id\\old.detail.vue' /* webpackChunkName: "pages_info__id_old.detail" */))
 const _6abf9095 = () => interopDefault(import('..\\pages\\info\\_id\\old.index.vue' /* webpackChunkName: "pages_info__id_old.index" */))
 const _ea1d0ca8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
-const _5b9abed0 = () => interopDefault(import('..\\pages\\_HOME.vue' /* webpackChunkName: "pages__HOME" */))
 const _446bfeee = () => interopDefault(import('..\\pages\\_id\\index.vue' /* webpackChunkName: "pages__id_index" */))
 const _336f7699 = () => interopDefault(import('..\\pages\\_pdf\\index.vue' /* webpackChunkName: "pages__pdf_index" */))
 const _1ca2728c = () => interopDefault(import('..\\pages\\_id\\old.detail.vue' /* webpackChunkName: "pages__id_old.detail" */))
@@ -99,6 +99,10 @@ export const routerOptions = {
     component: _9dad6d44,
     name: "test-gradients"
   }, {
+    path: "/test-responsive",
+    component: _4abcfda9,
+    name: "test-responsive"
+  }, {
     path: "/test-shapes",
     component: _7fb8e467,
     name: "test-shapes"
@@ -134,10 +138,6 @@ export const routerOptions = {
     path: "/",
     component: _ea1d0ca8,
     name: "index"
-  }, {
-    path: "/:HOME",
-    component: _5b9abed0,
-    name: "HOME"
   }, {
     path: "/:id",
     component: _446bfeee,
