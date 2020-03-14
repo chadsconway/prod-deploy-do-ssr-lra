@@ -1,0 +1,31 @@
+{
+  "name": "lra-v.0.4.0",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for the Living Rosary Apostolate Global Missionaries",
+  "author": "Chad Conway",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "start": "vue-cli-service serve --open"
+  },
+  "dependencies": {
+    "core-js": "^2.6.5",
+    "jquery": "^3.4.1",
+    "mdbvue": "^6.5.0",
+    "nuxt": "^2.6.3",
+    "popper.js": "^1.16.0",
+    "vue": "^2.6.11",
+    "vue-disqus": "^3.0.5",
+    "vue-responsive-components": "^0.2.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.9.0",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-vue-libs": "^3.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-mdb": "^1.9.0"
+  }
+}

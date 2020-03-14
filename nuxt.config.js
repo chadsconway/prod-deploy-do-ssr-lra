@@ -1,9 +1,5 @@
 export default {
   mode: "universal",
-  server: {
-    port: 8000, // default: 3000
-    host: "0.0.0.0" // default: localhost
-  },
   /*
    ** Headers of the page
    */
@@ -16,11 +12,6 @@ export default {
         hid: "description",
         name: "description",
         content: process.env.npm_package_description || ""
-      }
-    ],
-    script: [
-      {
-        src: "https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"
       }
     ],
     link: [
@@ -47,29 +38,28 @@ export default {
    */
   loading: { color: "#fff" },
   /*
+   ** Global CSS
+   */
+  css: [],
+  /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src: "@/plugins/bootstrap.js" },
-    { src: "@/plugins/jquery.client.js", mode: "client" },
-    { src: "@/plugins/responsive.js", mode: "client" }
-  ],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ["@nuxtjs/vuetify"],
-  /*
-   ** Router with Middleware Nested
-   */
-  router: {
-    middleware: ["mw1", "mw2"]
-  },
+  buildModules: [],
   /*
    ** Nuxt.js modules
    */
   modules: [
+    // Doc: https://bootstrap-vue.js.org
+    "bootstrap-vue/nuxt",
     // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    "@nuxtjs/pwa",
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    "@nuxtjs/dotenv"
   ],
   /*
    ** Axios module configuration
@@ -83,16 +73,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
-    /*
-     ** Global CSS
-     */
-    css: ["/mycustom.css", "/css/box-shadows.css"],
-    /*
-     ** For active highlighting of link tags
-     */
-    router: {
-      linkExactActiveClass: "active"
-    }
+    extend(config, ctx) {}
   }
 };
