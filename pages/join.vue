@@ -1,106 +1,92 @@
 <template>
-  <!-- From scotch.io form tutorial -->
-  <div class="hero is-fullheight is-info is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <!-- End scotchio -->
-
-        <div class="main">
-          <b-container>
-            <v-img
+  <div>
+    <!-- <v-img
               src="img/pb/blue-church.jpg"
-              height="100%"
+              width="100%"
               :aspect-ratio="3 / 1"
-            ></v-img>
-            <b-row align-h="start">
-              <b-col md="6" offset-md="2" class="gradient1 rounded">
-                <b-form
-                  id="signupform"
-                  @submit.prevent="onSubmit($data)"
-                  @reset="onReset"
-                  v-if="show"
-                >
-                  <b-form-group
-                    id="input-group-1"
-                    label="Email address:"
-                    label-for="input-1"
-                  >
-                    <b-form-input
-                      id="input-1"
-                      v-model="form.email"
-                      type="email"
-                      required
-                      placeholder="Enter email"
-                    ></b-form-input>
-                  </b-form-group>
-                  <b-form-group label="First Name:" label-for="input-2">
-                    <b-form-input
-                      id="input-2"
-                      v-model="form.firstname"
-                      required
-                      placeholder="Enter first name"
-                    ></b-form-input>
-                  </b-form-group>
-                  <b-form-group label="Last Name:" label-for="input-2">
-                    <b-form-input
-                      v-model="form.lastname"
-                      required
-                      placeholder="Enter last name"
-                    ></b-form-input>
-                  </b-form-group>
-                  <b-form inline>
-                    <label class="mr-sm-2" for="continent-selector"
-                      >Geographical Region</label
-                    >
-                    <b-form-select
-                      v-model="form.region"
-                      class="mb-2 mr-sm-2 mb-sm-0"
-                      :options="region"
-                      required
-                      id="continent-selector"
-                    >
-                      <template v-slot:first>
-                        <option :value="null">Choose...</option>
-                      </template>
-                    </b-form-select>
-                  </b-form>
+            ></v-img> -->
+    <b-row>
+      <b-col class="gradient1 rounded">
+        <b-form
+          id="signupform"
+          @submit.prevent="onSubmit($data)"
+          @reset="onReset"
+          v-if="show"
+        >
+          <b-form-group
+            id="input-group-1"
+            label="Email address:"
+            label-for="input-1"
+          >
+            <b-form-input
+              id="input-1"
+              v-model="form.email"
+              type="email"
+              required
+              placeholder="Enter email"
+            ></b-form-input>
+          </b-form-group>
+          <b-form-group label="First Name:" label-for="input-2">
+            <b-form-input
+              id="input-2"
+              v-model="form.firstname"
+              required
+              placeholder="Enter first name"
+            ></b-form-input>
+          </b-form-group>
+          <b-form-group label="Last Name:" label-for="input-2">
+            <b-form-input
+              v-model="form.lastname"
+              required
+              placeholder="Enter last name"
+            ></b-form-input>
+          </b-form-group>
+          <b-form inline>
+            <label class="mr-sm-2" for="continent-selector"
+              >Geographical Region</label
+            >
+            <b-form-select
+              v-model="form.region"
+              class="mb-2 mr-sm-2 mb-sm-0"
+              :options="region"
+              required
+              id="continent-selector"
+            >
+              <template v-slot:first>
+                <option :value="null">Choose...</option>
+              </template>
+            </b-form-select>
+          </b-form>
 
-                  <b-form-group id="input-group-4">
-                    <b-form-checkbox-group
-                      v-model="form.checked"
-                      id="checkboxes-4"
-                    >
-                      <b-form-checkbox value="join"
-                        >Please send me information so I may join in praying
-                        This Living Rosary</b-form-checkbox
-                      >
-                    </b-form-checkbox-group>
-                  </b-form-group>
+          <b-form-group id="input-group-4">
+            <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
+              <b-form-checkbox value="join"
+                >Please send me information so I may join in praying This Living
+                Rosary</b-form-checkbox
+              >
+            </b-form-checkbox-group>
+          </b-form-group>
 
-                  <b-form-textarea
-                    id="note"
-                    v-model="form.note"
-                    placeholder="(optional) Write a personalized note..."
-                    rows="3"
-                    max-rows="6"
-                  ></b-form-textarea>
+          <b-form-textarea
+            id="note"
+            v-model="form.note"
+            placeholder="(optional) Write a personalized note..."
+            rows="3"
+            max-rows="6"
+          ></b-form-textarea>
 
-                  <b-button type="submit" variant="primary">Submit</b-button>
-                  <b-button type="reset" variant="danger">Reset</b-button>
-                </b-form>
-              </b-col>
-            </b-row>
-          </b-container>
+          <b-button type="submit" variant="primary">Submit</b-button>
+          <b-button type="reset" variant="danger">Reset</b-button>
+        </b-form>
+      </b-col>
+    </b-row>
 
-          <b-card class="mt-3" header="Form Data Result">
-            <pre class="m-0">{{ form }}</pre>
-          </b-card>
-          <b-card class="mt-3" header="Results">
-            <pre class="m-0">{{ results }}</pre>
-          </b-card>
-        </div>
-      </div>
-    </div>
+    <b-card class="mt-3" header="Form Data Result">
+      <pre class="m-0">{{ form }}</pre>
+    </b-card>
+    <b-card class="mt-3" header="Results">
+      <pre class="m-0">{{ results }}</pre>
+    </b-card>
   </div>
 </template>
 
@@ -173,7 +159,7 @@ export default {
   asyncData() {}
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 $w3-theme-l5: #ebffff;
 $w3-theme-l4: #bcfffe;
 $w3-theme-l3: #78fffd;
@@ -189,8 +175,5 @@ $w3-theme-d5: #005755;
 .gradient1 {
   color: #fff;
   background-image: linear-gradient(to right, $w3-theme-d3, $w3-theme-d5);
-}
-.main {
-  background-color: black;
 }
 </style>

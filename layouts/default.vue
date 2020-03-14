@@ -2,15 +2,12 @@
   <div id="app">
     <v-app>
       <fab></fab>
-      <div class="main-container">
+      <div>
         <Header />
         <Sidenav v-bind:class="{ hideSideNav: sidenavIsHid }" />
-        <Main
-          class="main-item"
-          v-bind:class="{ addPaddingLeft: !sidenavIsHid }"
-        >
+        <div data="main">
           <nuxt />
-        </Main>
+        </div>
       </div>
       <MobileBottomNav />
       <Footer />
@@ -19,7 +16,7 @@
 </template>
 <script>
 import Header from "@/components/header";
-import Main from "@/components/main";
+
 import Footer from "@/components/footer";
 import Sidenav from "@/components/sidenav";
 import MobileBottomNav from "@/components/mobile_bottom_nav";
@@ -55,7 +52,16 @@ export default {
   }
 };
 </script>
-<style>
+<stylelang="scss">
+
+
+.slideOver {
+  margin-left: 200px;
+}
+
+.startPos {
+  margin-left: 60px;
+}
 .main-container {
   display: flex;
   flex-wrap: nowrap;
@@ -66,9 +72,7 @@ export default {
 .hideSideNav {
   display: none;
 }
-.addPaddingLeft {
-  padding-left: 60px;
-}
+
 
 a:hover {
   color: #007977;
@@ -148,4 +152,5 @@ a:hover {
 .w3-hover-border-theme:hover {
   border-color: #00aba9 !important;
 }
+
 </style>
