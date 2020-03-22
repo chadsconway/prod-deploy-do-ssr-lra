@@ -12,9 +12,10 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_workbox_9dd1bf3c from 'nuxt_plugin_workbox_9dd1bf3c' // Source: .\\workbox.js (mode: 'client')
-import nuxt_plugin_bootstrapvue_ea310616 from 'nuxt_plugin_bootstrapvue_ea310616' // Source: .\\bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_axios_15367674 from 'nuxt_plugin_axios_15367674' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_workbox_022d8bda from 'nuxt_plugin_workbox_022d8bda' // Source: .\\workbox.js (mode: 'client')
+import nuxt_plugin_bootstrapvue_7b9c6434 from 'nuxt_plugin_bootstrapvue_7b9c6434' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_plugin_6c173fe0 from 'nuxt_plugin_plugin_6c173fe0' // Source: .\\vuetify\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_50b8d292 from 'nuxt_plugin_axios_50b8d292' // Source: .\\axios.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -171,16 +172,20 @@ async function createApp (ssrContext) {
 
   // Plugin execution
 
-  if (process.client && typeof nuxt_plugin_workbox_9dd1bf3c === 'function') {
-    await nuxt_plugin_workbox_9dd1bf3c(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_022d8bda === 'function') {
+    await nuxt_plugin_workbox_022d8bda(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_ea310616 === 'function') {
-    await nuxt_plugin_bootstrapvue_ea310616(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_7b9c6434 === 'function') {
+    await nuxt_plugin_bootstrapvue_7b9c6434(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_15367674 === 'function') {
-    await nuxt_plugin_axios_15367674(app.context, inject)
+  if (typeof nuxt_plugin_plugin_6c173fe0 === 'function') {
+    await nuxt_plugin_plugin_6c173fe0(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_axios_50b8d292 === 'function') {
+    await nuxt_plugin_axios_50b8d292(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first

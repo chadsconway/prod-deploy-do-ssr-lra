@@ -5,7 +5,7 @@
       <div>
         <Header />
         <Sidenav v-bind:class="{ hideSideNav: sidenavIsHid }" />
-        <div data="main">
+        <div>
           <nuxt />
         </div>
       </div>
@@ -31,7 +31,6 @@ export default {
   components: {
     fab,
     Header,
-    Main,
     Footer,
     Sidenav,
     MobileBottomNav,
