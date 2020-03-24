@@ -1,9 +1,9 @@
 <template>
-	<div id="header" class="w3-container gradient1 w3-theme-d1 w3-hide-small">
-		<div id="headerText" class="w3-hide-medium">
+	<div id="header" class="w3-container gradient1 w3-theme-d1" :elevation="18">
+		<div id="headerText" class="w3-hide-medium w3-hide-small">
 			The Living Rosary Apostolate
 		</div>
-		<div id="headerTextSmall" class="w3-hide-large">
+		<div id="headerTextSmall" class="w3-hide-large w3-hide-small">
 			The Living Rosary Apostolate
 		</div>
 	</div>
@@ -14,6 +14,15 @@
 </script>
 
 <style scoped>
+	.hideHeaderBtn {
+		display: none;
+	}
+	.showHeaderBtn {
+		display: fixed;
+		z-index: 50;
+		top: 10px;
+		right: 10px;
+	}
 	#header {
 		position: fixed;
 		top: 0;

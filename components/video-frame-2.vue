@@ -2,7 +2,7 @@
 	<section class="container">
 		<!-- Card image -->
 
-		<div class="view view-cascade overlay" id="videobox">
+		<div class="view view-cascade overlay" id="videobox" :elevation="10">
 			<iframe
 				src="https://www.youtube.com/embed/y6m9xR_t4mU?rel=0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -11,7 +11,11 @@
 		</div>
 
 		<!-- Card content -->
-		<div class="card mb-3 shadow text-center z-depth-3" id="textbox">
+		<div
+			class="card mb-3 shadow text-center z-depth-3"
+			id="textbox"
+			:elevation="10"
+		>
 			<!-- Title -->
 			<h4 class="card-title">
 				<strong>Founders Frank and Trudy Bonack</strong>
@@ -60,7 +64,6 @@
 	}
 	#videobox {
 		width: 100%;
-		z-index: 10;
 		justify-content: center;
 		animation-name: leavevideo;
 		animation-duration: 0.3s;
@@ -68,7 +71,6 @@
 		animation-fill-mode: both;
 	}
 	#videobox:hover {
-		z-index: 15;
 		margin-bottom: 30px;
 		animation-name: entervideo;
 		animation-duration: 0.3s;
@@ -79,8 +81,6 @@
 		margin-left: 4%;
 		margin-right: 4%;
 		margin-top: -30px;
-
-		z-index: 10;
 	}
 	#create .v-speed-dial {
 		position: absolute;

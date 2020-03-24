@@ -13,7 +13,6 @@
 
 <script>
 	import videoFrame2 from '@/components/video-frame-2';
-	import cardVuetify from '@/components/card-vuetify';
 	export default {
 		transition: {
 			duration: 500,
@@ -21,7 +20,6 @@
 			leaveActiveClass: 'animated slideOutDown'
 		},
 		components: {
-			cardVuetify,
 			videoFrame2
 		}
 	};

@@ -5,7 +5,7 @@
 				<b-col xs="12" sm="12" md="8" lg="6" class="gradient1 rounded">
 					<b-card
 						img-top
-						img-src="/img/pb/winterlite.jpg"
+						img-src="/img/pb/field.jpg"
 						bg-variant="dark"
 						text-variant="white"
 						title="A Brief History of This Living Rosary Apostolate"

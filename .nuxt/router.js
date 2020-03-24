@@ -4,8 +4,6 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _ce23a4be = () => interopDefault(import('..\\pages\\approvals.vue' /* webpackChunkName: "pages_approvals" */))
-const _0b24bfc1 = () => interopDefault(import('..\\pages\\approvals\\index.vue' /* webpackChunkName: "pages_approvals_index" */))
-const _4ac61d14 = () => interopDefault(import('..\\pages\\approvals\\_pdf.vue' /* webpackChunkName: "pages_approvals__pdf" */))
 const _b37c70a4 = () => interopDefault(import('..\\pages\\donate.vue' /* webpackChunkName: "pages_donate" */))
 const _577a17a3 = () => interopDefault(import('..\\pages\\founders.vue' /* webpackChunkName: "pages_founders" */))
 const _688dd7e5 = () => interopDefault(import('..\\pages\\history.vue' /* webpackChunkName: "pages_history" */))
@@ -34,15 +32,7 @@ export const routerOptions = {
   routes: [{
     path: "/approvals",
     component: _ce23a4be,
-    children: [{
-      path: "",
-      component: _0b24bfc1,
-      name: "approvals"
-    }, {
-      path: ":pdf",
-      component: _4ac61d14,
-      name: "approvals-pdf"
-    }]
+    name: "approvals"
   }, {
     path: "/donate",
     component: _b37c70a4,

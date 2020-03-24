@@ -5,7 +5,7 @@
 			<div>
 				<Header />
 				<Sidenav v-bind:class="{ hideSideNav: sidenavIsHid }" />
-				<div id="mainholder">
+				<div id="main">
 					<nuxt />
 				</div>
 			</div>
@@ -52,9 +52,14 @@
 	};
 </script>
 <style>
-	#mainholder {
+	#main {
 		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-bottom: 120px;
+	}
+	.shrinkfab {
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
 	}
 	.slideOver {
 		margin-left: 200px;
