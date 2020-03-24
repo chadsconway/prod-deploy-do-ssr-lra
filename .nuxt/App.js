@@ -8,18 +8,18 @@ import {
 
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import '..\\node_modules\\bootstrap\\dist\\css\\bootstrap.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
-import '..\\node_modules\\bootstrap-vue\\dist\\bootstrap-vue.css'
+import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css'
 
-import '..\\assets\\css\\animate.css'
+import '../assets/css/animate.css'
 
-import _6f6c098b from '..\\layouts\\default.vue'
+import _6f6c098b from '../layouts/default.vue'
 
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"title":"lra-v.0.4.0","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"project for a group of global missionaries"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"lra-v.0.4.0"},{"hid":"author","name":"author","content":"csconway"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"lra-v.0.4.0"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"lra-v.0.4.0"},{"hid":"og:description","name":"og:description","property":"og:description","content":"project for a group of global missionaries"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fwww.w3schools.com\u002Fw3css\u002F4\u002Fw3.css"},{"rel":"stylesheet","type":"text\u002Fcss","href":""},{"rel":"stylesheet","type":"text\u002Fcss","href":""},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.ac5d11e8.json"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
+  head: {"title":"lra-v.0.4.0","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"project for a group of global missionaries"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"lra-v.0.4.0"},{"hid":"author","name":"author","content":"csconway"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"lra-v.0.4.0"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"lra-v.0.4.0"},{"hid":"og:description","name":"og:description","property":"og:description","content":"project for a group of global missionaries"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fwww.w3schools.com\u002Fw3css\u002F4\u002Fw3.css"},{"rel":"stylesheet","type":"text\u002Fcss","href":""},{"rel":"stylesheet","type":"text\u002Fcss","href":""},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.ac5d11e8.json"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
 
   render (h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
