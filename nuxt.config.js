@@ -1,5 +1,9 @@
 export default {
 	mode: 'universal',
+	server: {
+		port: 8000,
+		host: '0.0.0.0'
+	},
 	/*
 	 ** Headers of the page
 	 */
@@ -40,7 +44,7 @@ export default {
 	/*
 	 ** Global CSS
 	 */
-	css: [],
+	css: ['@/assets/css/animate.css'],
 	/*
 	 ** Plugins to load before mounting the App
 	 */

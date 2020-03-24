@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="sfs"
-		class="w3-sidebar w3-theme-d1 w3-bar-block w3-card w3-animate-left"
+		class="w3-sidebar d1 w3-bar-block w3-card w3-animate-left"
 		v-on:mouseover="updateWidth('wide')"
 		v-on:mouseout="updateWidth('narrow')"
 		v-bind:style="{ width: navwidth }"
@@ -50,22 +50,6 @@
 			</svg>
 			Approvals
 		</nuxt-link>
-		<!-- Testimony Tab -->
-		<!-- <nuxt-link
-to='/testimony'
-      class=" w3-bar-item w3-button"
-    >
-      <svg viewBox="0 0 512 512" width="30" height="30" class="icon">
-        <use xlink:href="#testimonial" />
-      </svg>
-      Testimony
-    </nuxt-link> -->
-		<!-- Calendar Tab for Events  -->
-		<!-- <nuxt-link v-bind:to="{id: 'calendar'}}" class=" w3-bar-item w3-button">
-      <svg viewBox="0 0 512.00244 512" width="30" height="30" class="icon">
-        <use xlink:href="#calendar" /></svg
-      >Events
-    </nuxt-link> -->
 
 		<nuxt-link to="/join" class=" pl-1 w3-bar-item w3-button cc-text">
 			<svg viewBox="0 0 100 125" width="40" height="40" class="icon">
@@ -79,14 +63,17 @@ to='/testimony'
 			</svg>
 			Founders
 		</nuxt-link>
+		<theme-colors />
 	</div>
 </template>
 
 <script>
 	import iconspritelite from '@/components/iconspritelite.vue';
+	import themeColors from '@/components/theme-colors.vue';
 	export default {
 		components: {
-			iconspritelite
+			iconspritelite,
+			themeColors
 		},
 		name: 'sidenav',
 		data: function() {
@@ -190,5 +177,17 @@ to='/testimony'
 
 	.blur {
 		opacity: 0.9;
+	}
+	.w3-button {
+		background-color: #007977;
+	}
+	.w3-bar-item {
+		background-color: #007977;
+	}
+	.cc-text {
+		color: white;
+	}
+	.w3-sidebar {
+		background-color: #007977;
 	}
 </style>
