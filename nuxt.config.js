@@ -2,7 +2,7 @@ export default {
 	generate: {
 		subFolders: false
 	},
-	mode: 'spa',
+	mode: 'universal',
 	server: {
 		port: 8000,
 		host: '0.0.0.0'
