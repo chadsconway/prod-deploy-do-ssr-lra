@@ -61,4 +61,7 @@
 	b-button {
 		color: gray;
 	}
+	b-container {
+		bottom: 150px;
+	}
 </style>

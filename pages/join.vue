@@ -81,11 +81,13 @@
 				</b-row>
 			</b-container>
 		</div>
+		<theme-colors />
 	</div>
 </template>
 
 <script>
 	import axios from 'axios';
+	import themeColors from '@/components/theme-colors.vue';
 	export default {
 		transition: {
 			duration: 500,
@@ -104,6 +106,9 @@
 				},
 				show: true
 			};
+		},
+		components: {
+			themeColors
 		},
 		methods: {
 			onReset: function(evt) {

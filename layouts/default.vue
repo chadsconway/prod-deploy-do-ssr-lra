@@ -5,7 +5,7 @@
 			<div>
 				<Header />
 				<Sidenav v-bind:class="{ hideSideNav: sidenavIsHid }" />
-				<div id="main">
+				<div id="w3-padding-64">
 					<nuxt />
 				</div>
 			</div>
@@ -55,6 +55,9 @@
 	#main {
 		padding-top: 60px;
 		padding-bottom: 120px;
+	}
+	b-container {
+		padding-bottom: 150px;
 	}
 	.shrinkfab {
 		position: fixed;

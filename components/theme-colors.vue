@@ -10,6 +10,7 @@
 	b-container {
 		position: absolute;
 		margin-top: 100px;
+		bottom: 150px;
 		z-index: 2;
 	}
 	b-col {

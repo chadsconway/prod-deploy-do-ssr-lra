@@ -1,7 +1,7 @@
 <template>
 	<div
 		id="sfs"
-		class="w3-sidebar d1 w3-bar-block w3-card w3-animate-left"
+		class="w3-sidebar w3-hide-xsmall w3-hide-small d1 w3-bar-block w3-card w3-animate-left"
 		v-on:mouseover="updateWidth('wide')"
 		v-on:mouseout="updateWidth('narrow')"
 		v-bind:style="{ width: navwidth }"
